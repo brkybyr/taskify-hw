@@ -74,4 +74,68 @@ In a new terminal:
 
 docker-compose exec backend python manage.py migrate
 docker-compose exec backend python manage.py createsuperuser
+# Taskify – Task Management Application
+
+This project is a simple task management application developed as a university course assignment.
+
+The project is divided into two main parts: backend and frontend.
+
+---
+
+## Technologies Used
+
+### Backend
+- Python
+- Django
+- Django Rest Framework
+- PostgreSQL
+- Docker
+
+### Frontend
+- HTML
+- CSS
+- JavaScript
+
+---
+
+## Project Structure
+
+taskify-hw
+├── backend
+├── frontend
+│ ├── index.html
+│ ├── style.css
+│ └── script.js
+├── docker-compose.yml
+└── README.md
+
+---
+
+## Project Team
+
+- Backend Development: Implemented by my project partner  
+- Frontend Development: Implemented by Murat  
+
+---
+
+## Project Purpose
+
+The purpose of this project is to build a simple web-based task management system.
+
+---
+
+## How to Run
+
+Frontend files can be opened directly in the browser:
+
+frontend/index.html
+
+Backend is configured using Docker.
+
+---
+
+## Notes
+
+This project was created for educational purposes.
+
 
