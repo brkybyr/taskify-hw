@@ -1,141 +1,113 @@
-# Taskify – Backend API
+# Taskify – Full Stack Task Management System
 
-Taskify is a study & task management backend API built with **Django Rest Framework**,  
-containerized using **Docker** and **PostgreSQL**.
-
-This repository contains **only the backend**.  
-Frontend (React / Next.js) can connect via REST API.
+Taskify is a full-stack web application developed as a course project.  
+The system allows users to manage courses and tasks through a modern dashboard interface.
 
 ---
 
-## 🚀 Backend Tech Stack
-
-- Python3
-- Django + Django Rest Framework
-- PostgreSQL
-- JWT Authentication
-- Swagger (drf-yasg)
-- Docker & Docker Compose
-
----
-
-## 📦 Project Structure
-
-taskify-hw/
-│
-├── backend/
-│ ├── accounts/
-│ ├── courses/
-│ ├── tasks/
-│ ├── config/
-│ └── manage.py
-│
-├── docker-compose.yml
-├── Dockerfile
-├── .env
-└── README.md
-
-
----
-
-## 🐳 Run Project with Docker (Recommended)
-
-### 1️⃣ Clone repository
-
-```bash
-git clone https://github.com/USERNAME/taskify-hw.git
-cd taskify-hw
-
-2️⃣ Create .env file
-DEBUG=1
-SECRET_KEY=super-secret-key
-
-DB_NAME=taskify_db
-DB_USER=taskify_user
-DB_PASSWORD=taskify_pass
-DB_HOST=db
-DB_PORT=5432
-
-DJANGO_SUPERUSER_EMAIL=admin@admin.com
-DJANGO_SUPERUSER_USERNAME=admin
-DJANGO_SUPERUSER_PASSWORD=admin123
-
-3️⃣ Start containers
-docker-compose up --build
-
-
-Frontend will be use swagger api documentation:
-
-http://localhost:8000/swagger
-
-🛠 Initial Setup (First Time Only)
-
-In a new terminal:
-
-docker-compose exec backend python manage.py migrate
-docker-compose exec backend python manage.py createsuperuser
-# Taskify – Task Management Application
-
-This project is a simple task management application developed as a university course assignment.
-
-The project is divided into two main parts: backend and frontend.
-
----
-
-## Technologies Used
+## 🚀 Technologies Used
 
 ### Backend
 - Python
 - Django
-- Django Rest Framework
+- Django REST Framework
+- JWT Authentication
 - PostgreSQL
-- Docker
+- Docker & Docker Compose
+- Swagger (OpenAPI)
 
 ### Frontend
-- HTML
-- CSS
-- JavaScript
+- Next.js 15
+- React
+- TypeScript
+- Tailwind CSS
+- App Router Architecture
 
 ---
 
-## Project Structure
+## 📁 Project Structure
 
-taskify-hw
-├── backend
-├── frontend
-│ ├── index.html
-│ ├── style.css
-│ └── script.js
-├── docker-compose.yml
+taskify-fullstack/
+│
+├── backend/
+│ ├── Dockerfile
+│ ├── docker-compose.yml
+│ ├── manage.py
+│ ├── requirements.txt
+│ ├── users/
+│ ├── courses/
+│ └── config/
+│
+├── frontend/
+│ ├── app/
+│ │ ├── dashboard/
+│ │ ├── layout.tsx
+│ │ └── page.tsx
+│ ├── components/
+│ ├── lib/
+│ └── public/
+│
+├── .gitignore
 └── README.md
 
 ---
 
-## Project Team
+## 🔐 Authentication
 
-- Backend Development: Implemented by my project partner  
-- Frontend Development: Implemented by Murat  
+The backend uses **JWT authentication**.
 
----
-
-## Project Purpose
-
-The purpose of this project is to build a simple web-based task management system.
+Users must log in to receive an access token, which is required for all protected API endpoints.
 
 ---
 
-## How to Run
+## 📡 API Documentation
 
-Frontend files can be opened directly in the browser:
+Swagger UI is available at:
 
-frontend/index.html
-
-Backend is configured using Docker.
+http://localhost:8000/swagger/
 
 ---
 
-## Notes
+## 🧠 Features
 
-This project was created for educational purposes.
+### Backend
+- User authentication (JWT)
+- Course management (CRUD)
+- Task management (CRUD)
+- Secure API endpoints
+- Swagger documentation
 
+### Frontend
+- Dashboard layout
+- Course listing
+- Course statistics
+- Responsive UI with Tailwind
+- API integration with backend
 
+---
+
+## ▶️ How to Run the Project
+
+### Backend
+
+```bash
+cd backend
+docker-compose up --build
+Backend will run at:
+http://localhost:8000
+cd frontend
+npm install
+npm run dev
+Frontend will run at:
+http://localhost:3000
+
+📌 Notes
+This project was developed for educational purposes.
+
+Backend and frontend are separated following modern full-stack architecture principles.
+
+Environment variables are excluded via .gitignore.
+
+👨‍💻 Author
+
+Student Project – Full Stack Development

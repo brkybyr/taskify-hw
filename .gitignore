@@ -1,2 +1,43 @@
-## test
+# =====================
+# General
+# =====================
 .env
+.env.local
+.env.*.local
+*.log
+
+# =====================
+# Python / Django
+# =====================
+__pycache__/
+*.py[cod]
+*.sqlite3
+*.db
+*.egg-info/
+dist/
+build/
+venv/
+.env/
+.idea/
+.vscode/
+
+# =====================
+# Docker
+# =====================
+*.dockerignore
+
+# =====================
+# Node / Next.js
+# =====================
+node_modules/
+.next/
+out/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =====================
+# OS
+# =====================
+.DS_Store
+Thumbs.db
